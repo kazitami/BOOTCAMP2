@@ -18,7 +18,15 @@ public class scrollUpAndDown {
 		
 	}
 	@Test
-	public void scrollUpDown() {
+	public void scrollUpDown() throws Exception {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,-1000)");
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,-1000)");
 		
 		
 	}
